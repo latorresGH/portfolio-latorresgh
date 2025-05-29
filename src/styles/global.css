@@ -28,6 +28,14 @@ body::-webkit-scrollbar {
   }
 
 @font-face {
+    font-family: 'FuturaBook';
+    src: url('/Fonts/Futura/FuturaCyrillicBook.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+@font-face {
     font-family: 'OvercameDemo';
     src: url('/Fonts/Outline/OvercameDemoOutline.ttf') format('truetype');
     font-weight: 400;
