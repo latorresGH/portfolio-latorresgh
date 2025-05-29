@@ -1,0 +1,77 @@
+@import '@fontsource/montserrat/latin.css'; /* o latin-ext, full depende lo que necesites */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Oculta la barra sin desactivar el scroll */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  background-color: #050505;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+
+@font-face {
+    font-family: 'SuisseIntl';
+    src: url('/Fonts/SuisseIntl-Regular/SuisseIntl-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'OvercameDemo';
+    src: url('/Fonts/Outline/OvercameDemoOutline.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: 'Aurora';
+  src: url('/Fonts/Aurora/Aurora.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zaslia';
+  src: url('/Fonts/Zaslia/Zaslia.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-details {
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+
+  h1, .titulo-animado {
+    overflow: hidden;
+    display: inline-block;
+    padding: 1vh;
+  }
+
+
+  .titulo-animado span {
+    display: inline-block;
+    will-change: transform;
+  }
+  
+  .stroke-text {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    /* Opcional: mejora la legibilidad */
+    text-shadow: none;
+  }
+  
+/* Añadir esta parte a tu archivo CSS */

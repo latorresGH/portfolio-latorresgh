@@ -1,0 +1,18 @@
+---
+import CenterTittle from "./React/Home/Tittle.tsx";
+import Header from "./React/Home/Header.tsx";
+import Secciones from "./React/Home/SectionsList.tsx";
+---
+
+<section
+  id="inicio"
+  class="relative bg-cover bg-no-repeat min-h-screen bg-[#050505]"
+>
+  <div
+    class="relative justify-between bg-[url('/Imagenes/Background/Background-white.jpg')] bg-center bg-cover m-9 h-[93vh] rounded-lg"
+  >
+    <Header client:load />
+    <CenterTittle client:load />
+    <Secciones client:load />
+  </div>
+</section>

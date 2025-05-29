@@ -1,0 +1,25 @@
+<!-- ---
+import { projects } from '../utils/projects/projects';
+import ExperienceScroll from './React/MiExperiencia/ExperienceScroll'
+
+---
+
+<ExperienceScroll client:load />
+
+<section id="experiencia" class="h-screen relative overflow-hidden flex justify-center items-center ">
+  <div class="flex gap-8 h-[600px] project-rows">
+    {projects.map((project) => (
+      <div class="flex-none w-[400px] h-[600px] rounded-lg bg-white shadow-lg transition-transform duration-300 hover:-translate-y-1 overflow-hidden">
+        <img
+          src={project.thumbnail}
+          alt={project.titulo}
+        class="parallax-img w-full h-[400px] object-cover"
+        />
+        <div class="p-4">
+          <h3 class="font-bold mb-2">{project.titulo}</h3>
+          <p class="text-sm text-gray-600">{project.descripcion}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section> -->

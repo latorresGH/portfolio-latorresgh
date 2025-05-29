@@ -1,0 +1,4 @@
+Para incrustar una fuente, copie el código en el cabezal de su html
+<script src="https://c.webfontfree.com/c.js?f=SuisseIntl-Regular" type="text/javascript"></script>
+2Reglas CSS para especificar fuentes
+font-family: 'SuisseIntl-Regular', cursive;

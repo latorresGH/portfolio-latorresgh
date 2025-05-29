@@ -1,0 +1,61 @@
+<!-- ---
+import { Skills } from "../utils/Skills/skillsList";
+---
+
+<section class="w-full bg-[#111111] text-white py-12 flex justify-center">
+  <div
+    class="relative grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-8 p-12"
+    id="skills-container"
+  >
+    <div
+      id="hover-bg"
+      class="absolute rounded-2xl bg-white/10 hover-glow z-0 pointer-events-none"
+      style="opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;"
+    >
+    </div>
+
+    {
+      Skills.map(({ name, Icon }) => (
+        <div
+          class="group h-56 w-56 skill-item relative z-10 p-6 flex flex-col items-center justify-center
+                     bg-zinc-900 border border-white/10 rounded-2xl
+                     transition-all duration-300 ease-in-out text-white
+                     blur-[1.5px]
+                     hover:blur-none hover:opacity-100 hover:scale-105 hover:border-white hover:border-2 hover:bg-stone-500">
+          <Icon class="w-10 h-10 mb-2 filter saturate-0 group-hover:saturate-100 transition duration-300" />
+          <span class="text-sm">{name}</span>
+        </div>
+      ))
+    }
+    
+  </div>
+
+  <script type="module" client:load>
+    const container = document.getElementById("skills-container");
+    const hoverEl = document.getElementById("hover-bg");
+    const items = container?.querySelectorAll(".skill-item");
+
+    items?.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        const rect = item.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+
+        const extra = 24;
+
+        hoverEl.style.width = `${rect.width + extra}px`;
+        hoverEl.style.height = `${rect.height + extra}px`;
+
+        hoverEl.style.transform = `translate(
+          ${rect.left - containerRect.left - extra / 2}px,
+          ${rect.top - containerRect.top - extra / 2}px
+        )`;
+
+        hoverEl.style.opacity = "1";
+      });
+
+      item.addEventListener("mouseleave", () => {
+        hoverEl.style.opacity = "0";
+      });
+    });
+  </script>
+</section> -->
