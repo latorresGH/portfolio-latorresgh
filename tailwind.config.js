@@ -20,6 +20,9 @@ export default {
       backgroundSize: {
         50: "50%",
       },
+      borderWidth: {
+        '0.5': '0.5px',
+      },
     },
   },
   plugins: [],

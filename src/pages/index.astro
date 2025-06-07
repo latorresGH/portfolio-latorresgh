@@ -2,18 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import Loader from "../components/React/Loader/Loader";
 import HeaderSecciones from "../components/React/Navbar/HeaderSecciones";
+import MyStats from "../components/MyStats.astro";
 import Home from "../components/Home.astro";
 import AboutMe from "../components/AboutMe.astro";
 import MyExperience from "../components/MyExperience.astro";
-import CustomCursor from "../components/CustomCursor.astro";
-
+import MySkills from "../components/MySkills.astro";
+import ContactMe from "../components/ContactMe.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<!-- <Loader client:load />
-<CustomCursor /> -->
+<Loader client:load />
 <Layout>
-  <HeaderSecciones client:load />
+  <!-- <HeaderSecciones client:load /> -->
   <Home />
-  <AboutMe client:load />
-  <MyExperience client:load />
+  <AboutMe />
+  <MyExperience />
+  <!-- <MyStats/> -->
+  <MySkills/>
+  <ContactMe />
+  <Footer />
 </Layout>
