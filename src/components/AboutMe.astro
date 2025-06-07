@@ -1,7 +1,8 @@
 ---
 import { AnimSobreMi, ZoomImage } from "../utils/animations/aboutMeAnimation";
-import {UpText} from "../utils/animations/upText";
+import { UpText } from "../utils/animations/upText";
 ---
+
 <AnimSobreMi client:load />
 <!-- ESTA LÍNEA ES LA CLAVE -->
 <ZoomImage client:load />
@@ -11,26 +12,26 @@ import {UpText} from "../utils/animations/upText";
   class="relative w-full h-[260vh] text-white overflow-hidden justify-center z-10 bg-[#050505]"
 >
   <!-- CONTENIDO PINNED -->
-  <div
-    id="zoom-content"
-    class="sticky top-0 h-screen w-full flex items-center "
-  >
+  <div id="zoom-content" class="sticky top-0 h-screen w-full flex items-center">
     <div
       class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 mt-[5vh]"
     >
-    <div class="absolute top-[7vh]">
-      <!-- <p class="text-[5rem] ">SOBRE MI</p> -->
-      <UpText client:load className="text-[6rem] overflow-hidden font-thin font-Zaslia text-[#BD5B2D]">
-        <p>SOBRE MI</p>
-      </UpText>
-    </div>
+      <div class="absolute top-[7vh]">
+        <!-- <p class="text-[5rem] ">SOBRE MI</p> -->
+        <UpText
+          client:load
+          className="text-[6rem] overflow-hidden font-thin font-Zaslia text-[#BD5B2D]"
+        >
+          <p>SOBRE MI</p>
+        </UpText>
+      </div>
 
       <div class="flex flex-col items-center text-[#EDEBEB]">
         <p class="font-caslon text-[9rem] leading-none">TORRES</p>
         <p class="font-caslon text-[11rem] italic leading-none">LAUREANO</p>
       </div>
       <div class="w-1/2 mt-10 text-center italic font-montserrat text-sm">
-        Soy un Desarrollador de Software Junior, recientemente egresado del IES
+        <!-- Soy un Desarrollador de Software Junior, recientemente egresado del IES
         (2025). Me apasiona la tecnología, el aprendizaje constante y la
         creación de soluciones que conecten diseño y funcionalidad. Me considero
         una persona curiosa, detallista y comprometida. Disfruto tanto del
@@ -39,7 +40,19 @@ import {UpText} from "../utils/animations/upText";
         Me interesa el desarrollo web full-stack, el diseño interactivo, y las
         herramientas que permiten experimentar con nuevas formas de construir
         experiencias digitales. Siempre estoy buscando maneras de crecer,
-        aprender algo nuevo o mejorar lo que ya sé.
+        aprender algo nuevo o mejorar lo que ya sé. -->
+
+
+        Soy un Desarrollador de Software Junior, recientemente egresado del IES (2025).
+        Me apasiona la tecnolog&iacute;a, el aprendizaje constante y la creaci&oacute;n
+        de soluciones que conecten dise&ntilde;o y funcionalidad. Me considero una
+        persona curiosa, detallista y comprometida. Disfruto tanto del trabajo en
+        equipo como de los desaf&iacute;os individuales, y valoro especialmente los
+        proyectos que tienen un impacto real o creativo. Me interesa el desarrollo
+        web full-stack, el dise&ntilde;o interactivo, y las herramientas que permiten
+        experimentar con nuevas formas de construir experiencias digitales. Siempre <!-- <--------------- NO ME FUNCIONABA EL TEXTO NORMAL, ASI QUE USE ENTIDADES PARA EL TEXTO -->
+        estoy buscando maneras de crecer, aprender algo nuevo o mejorar lo que ya
+        s&eacute;.
       </div>
     </div>
 
@@ -52,7 +65,7 @@ import {UpText} from "../utils/animations/upText";
     />
 
     <div class="absolute bottom-10 right-5 z-50">
-        <span class="font-montserrat text-[1.4rem]">01</span>
-      </div>
+      <span class="font-montserrat text-[1.4rem]">01</span>
+    </div>
   </div>
 </section>
