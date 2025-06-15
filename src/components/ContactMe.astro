@@ -1,3 +1,7 @@
+---
+import ContactFormReact from '../components/React/FormContact/ContactFormReact';
+---
+
 <section class="text-white px-72 py-20">
   <div>
 <div class="flex justify-end">
@@ -12,31 +16,11 @@
     ¿TE <span class="font-bold">GUSTO ALGO</span>? ¿SENTÍS QUE PODRIAMOS <span class="font-bold">CREAR ALGO JUNTOS</span>? NO LO PIENSES 
     TANTO, ESCRIBIME. LAS COSAS QUE VALEN LA PENA, SE CONSTRUYEN DANDO EL PRIMER PASO.
   </p>
+  <p>¿Probás copiar y pegar esto desde VSCode?</p>
 
 </div>
-<div class="flex flex-col gap-4 p-4 text-5xl font-montserrat">
-  <input type="text" placeholder="PRIMER NOMBRE"
-    class="border-0 border-b-0.5 border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" />
 
-  <input type="text" placeholder="APELLIDO"
-    class="border-0 border-b-0.5 border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" />
-
-  <input type="text" placeholder="CORREO"
-    class="border-0 border-b-0.5 border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" />
-
-  <textarea
-  placeholder="MENSAJE QUE DESEAS ENVIAR"
-  class="border-[0.5px] border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 h-64 py-2 px-2 resize-none"
-/>
-
-  <button
-    class="mt-4 w-fit self-end px-6 py-3 border border-[#5a2b16] text-white text-3xl hover:bg-[#5a2b16] transition-all duration-300"
-  >
-    ENVIAR
-  </button>
-</div>
-
-
+ <ContactFormReact client:load />
 
   </div>
 </section>

@@ -25,7 +25,7 @@ export default function CenterTittle() {
   return (
     <section className="flex justify-center items-center h-[80vh]">
       <div className="flex flex-col items-center font-aurora">
-        <h1 className="text-[#FFCC00] text-[6rem] m-0 leading-none imagen-nombre ">
+        <h1 className="text-[#FFCC00] text-[6rem] m-0 leading-none up-text-animation ">
           Portafolio
         </h1>
         <p className="text-[1.20rem] text-white -mt-6">
