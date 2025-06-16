@@ -23,7 +23,7 @@ gsap.fromTo(
       start: "top center",
       end: () => `+=${container.scrollHeight}`,
       scrub: 0.5,
-      markers: true,
+      // markers: true,
       // pin: true, // opcional si querés que el container quede fijo mientras animás
     },
   }

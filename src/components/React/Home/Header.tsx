@@ -34,23 +34,57 @@ export default function LeftLinks() {
         </div>
 
         <div>
-          <ul className="flex gap-6 mt-4 mr-6 h-[2.5rem] items-center justify-center text-[1.10rem]">
-            <li>
-              <a href="">INICIO</a>
-            </li>
-            <li>
-              <a href="">SOBRE MI</a>
-            </li>
-            <li>
-              <a href="">MI EXPERIENCIA</a>
-            </li>
-            <li>
-              <a href="">PROYECTOS</a>
-            </li>
-            <li>
-              <a href="">CONTACTAME</a>
-            </li>
-          </ul>
+<ul className="flex gap-6 mt-4 mr-6 h-[2.5rem] items-center justify-center text-[1.10rem]">
+  <li className="relative group">
+    <a
+      href="#inicio"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      INICIO
+    </a>
+  </li>
+  <li className="relative group">
+    <a
+      href="#sobre-mi"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      SOBRE MI
+    </a>
+  </li>
+  <li className="relative group">
+    <a
+      href="#estudios"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      ESTUDIOS
+    </a>
+  </li>
+  <li className="relative group">
+    <a
+      href="#experiencia"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      MI EXPERIENCIA
+    </a>
+  </li>
+  <li className="relative group">
+    <a
+      href="#skills"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      SKILLS
+    </a>
+  </li>
+  <li className="relative group">
+    <a
+      href="#contactame"
+      className="after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#484848] group-hover:after:w-full after:transition-all after:duration-500"
+    >
+      CONTACTAME
+    </a>
+  </li>
+</ul>
+
         </div>
       </section>
     </>

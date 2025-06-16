@@ -5,6 +5,7 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: ['responsive'],
       fontFamily: {
         suisse: ["SuisseIntl", "sans-serif"],
         aurora: ["Aurora", "sans-serif"],

@@ -11,6 +11,22 @@ export const initLenis = () => {
   };
 
   requestAnimationFrame(raf);
+
+  // Acá podés agregar lo del scroll suave en los links:
+  const anchors = document.querySelectorAll('a[href^="#"]');
+
+  anchors.forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = anchor.getAttribute('href')!.substring(1);
+      const target = document.getElementById(id);
+      if (target) {
+        lenis.scrollTo(target, {
+          offset: 0,
+        });
+      }
+    });
+  });
 };
 
 export const spawnNavbar = (selector: string) => {

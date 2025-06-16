@@ -12,15 +12,23 @@ import Footer from "../components/Footer.astro";
 import MyEducation from "../components/MyEducation.astro";
 ---
 
-<!-- <Loader client:load /> -->
+<Loader client:load />
 <Layout>
-  <!-- <HeaderSecciones client:load /> -->
   <Home />
-  <AboutMe />
-  <MyEducation />
-  <MyExperience />
-  <!-- <MyStats/> -->
-  <MySkills/>
-  <ContactMe />
+  <section id="sobre-mi" class="scroll-mt-20">
+    <AboutMe />
+  </section>
+  <section id="estudios" class="scroll-mt-20">
+    <MyEducation />
+  </section>
+    <section id="experiencia" class="scroll-mt-20">
+      <MyExperience />
+    </section>
+    <section id="skills" class="scroll-mt-20">
+      <MySkills/>
+    </section>
+    <section id="contactame" class="scroll-mt-20">
+      <ContactMe />
+    </section>
   <Footer />
 </Layout>
