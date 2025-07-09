@@ -45,9 +45,9 @@ export default function EducationTimeline() {
           item.side === "right" ? "justify-start pl-10" : "justify-end pr-10"
         }`}
       >
-        <div className="max-w-md">
+        <div className="max-w-md font-OpenSans">
           <span className="text-sm text-gray-300 block mb-2">{item.fecha}</span>
-          <h2 className="text-2xl font-semibold mb-1">{item.titulo}</h2>
+          <h2 className="text-2xl font-normal mb-1 text-[#de9878] font-caslon">{item.titulo}</h2>
           <p className="text-base">{item.descripcion}</p>
         </div>
       </div>

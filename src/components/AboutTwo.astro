@@ -1,0 +1,39 @@
+---
+import TextoAnimado from "./React/TextoAnimado/TextoAnimado"
+---
+
+<section id="zoom-section">
+  <TextoAnimado client:load />
+
+  <div class="relative w-full overflow-hidden font-caslon mt-40 mb-44 flex justify-center">
+    <div class="flex items-center justify-center text-[5rem] leading-[1.1] text-left relative">
+      
+      <!-- Contenedor del texto -->
+      <div class="relative max-w-[900px]">
+        <!-- Texto gris base -->
+        <div class="text-[#555] relative z-10">
+          Soy un programador de Argentina, recibido como desarrollador de software.
+          Me gusta programar y ver resultados. Tengo preferencia por el frontend,
+          aunque también disfruto explorar otras áreas.
+        </div>
+
+        <!-- Texto blanco animado encima -->
+        <div class="text-white text-animated absolute top-0 left-0 z-20 w-full h-full pointer-events-none">
+          Soy un programador de Argentina, recibido como desarrollador de software.
+          Me gusta programar y ver resultados. Tengo preferencia por el frontend,
+          aunque también disfruto explorar otras áreas.
+        </div>
+      </div>
+
+      <!-- Imagen bien pegada al texto -->
+      <div class="ml-4">
+        <img
+          id="zoom-img"
+          src="/Imagenes/mipicture1.jpg"
+          alt="Zoom"
+          class="w-[207px] h-[303px] object-cover shadow-[0px_4px_26px_25px_rgba(0,0,0,0.3)] pointer-events-none"
+        />
+      </div>
+    </div>
+  </div>
+</section>

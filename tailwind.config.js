@@ -14,6 +14,8 @@ export default {
         overcame: ["OvercameDemo", "sans-serif"],
         caslon: ['"Libre Caslon Text"', "serif"],
         FuturaBook: ["FuturaBook", "sans-serif"],
+        OpenSans: ["Open Sans", "sans-serif"],
+
       },
       lineHeight: {
         custom: "1.8125rem", // para 29px
