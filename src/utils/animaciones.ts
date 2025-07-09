@@ -61,7 +61,7 @@ export const spawnText = (selector: string) => {
       opacity: 1,
       y: 0,
       duration: 1.2,
-      delay: 11, // ← Aca va el delay
+      delay: 8, // ← Aca va el delay
       ease: 'power3.out',
       onStart: () => {
         console.log('Animación de título iniciada');

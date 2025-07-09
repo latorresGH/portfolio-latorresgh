@@ -16,7 +16,7 @@ export default function LeftLinks() {
   return (
     <>
       <section
-        className="text-[#484848] flex w-[96.2vw] h-16 justify-between"
+        className="text-[#484848] flex w-[96.2vw] h-16 justify-between spawn-text-animation"
         style={{ fontFamily: "SuisseIntl" }}
       >
         {/* Marquee */}
