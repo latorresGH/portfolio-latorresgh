@@ -5,7 +5,7 @@ export default {
   ],
   theme: {
     extend: {
-      scrollBehavior: ['responsive'],
+      scrollBehavior: ["responsive"],
       fontFamily: {
         suisse: ["SuisseIntl", "sans-serif"],
         aurora: ["Aurora", "sans-serif"],
@@ -15,7 +15,9 @@ export default {
         caslon: ['"Libre Caslon Text"', "serif"],
         FuturaBook: ["FuturaBook", "sans-serif"],
         OpenSans: ["Open Sans", "sans-serif"],
-
+        bebasNeue: ['"Bebas Neue"', "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        mono: ['"Space Mono"', "monospace"],
       },
       lineHeight: {
         custom: "1.8125rem", // para 29px
@@ -24,7 +26,7 @@ export default {
         50: "50%",
       },
       borderWidth: {
-        '0.5': '0.5px',
+        0.5: "0.5px",
       },
     },
   },

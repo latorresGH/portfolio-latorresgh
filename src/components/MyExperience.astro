@@ -1,17 +1,25 @@
+---
+import ScrambleText from "./React/ScrambleText/ScrambleText.tsx";
+---
+
 <section class="text-white">
   <div
     class="grid grid-cols-3 grid-rows-2 gap-[65px] mx-auto py-20"
     style="max-width: calc(3 * 400px + 2 * 50px);"
   >
-    <div
-      class="h-[550px] w-[400px] flex items-center justify-center text-[8rem] leading-none text-center break-words font-Zaslia"
-    >
-      MI<br />
-      EXPE<br />
-      RIEN<br />
-      CIA
-    </div>
-
+<ScrambleText
+  text={`MI\nEXPE\nRIEN\nCIA`}
+  className="h-[550px] w-[400px] flex items-center justify-center text-[8rem] leading-none text-center break-words font-Zaslia"
+  trigger="hover"               
+  stepTime={10}                 
+  iterations={5}               
+  scrambleFraction={0.05}      
+  idleJitter={true}             
+  idleEveryMs={3800}           
+  idleBatch={5}               
+  chars="#$%{}[]()/\\|<>_-=+*?@~^&0123456789"
+  client:load                  
+/>
     <div
       class="h-[550px] w-[400px] rounded-[10px] bg-[#141417] font-FuturaBook p-8 flex flex-col justify-between items-start hover:scale-[1.01] transition-transform duration-300"
     >

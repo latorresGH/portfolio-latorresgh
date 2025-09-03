@@ -1,71 +1,115 @@
 ---
-import { AnimSobreMi, ZoomImage } from "../utils/animations/aboutMeAnimation";
-import { UpText } from "../utils/animations/upText";
+const items = [
+  {
+    num: "01",
+    title: "PASIÓN",
+    text:
+      "Me apasiona la tecnología, el aprendizaje constante y la creación de soluciones que conecten diseño y funcionalidad."
+  },
+  {
+    num: "02",
+    title: "FORMACIÓN",
+    text:
+      "Soy Desarrollador de Software Junior, recientemente egresado del IES (2025). Me considero una persona curiosa, detallista y comprometida."
+  },
+  {
+    num: "03",
+    title: "ENFOQUE",
+    text:
+      "Disfruto tanto del trabajo en equipo como de los desafíos individuales. Busco siempre aportar valor en proyectos con impacto real o creativo."
+  },
+  {
+    num: "04",
+    title: "INTERESES",
+    text:
+      "Me interesa el desarrollo web full-stack, el diseño interactivo y las herramientas que permiten experimentar con nuevas formas de construir experiencias digitales."
+  },
+  {
+    num: "05",
+    title: "VISIÓN",
+    text:
+      "Siempre estoy buscando maneras de crecer, aprender algo nuevo o mejorar lo que ya sé. Mi objetivo es seguir formándome y aportar innovación en cada proyecto."
+  }
+];
 ---
 
-<AnimSobreMi client:load />
-<!-- ESTA LÍNEA ES LA CLAVE -->
-<ZoomImage client:load />
+<section class="w-full  text-white mb-32">
+  <div class="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
+    <div class="grid grid-cols-12 gap-x-8 gap-y-14">
 
-<section
-  id="zoom-section"
-  class="relative w-full h-[260vh] text-white overflow-hidden justify-center z-10 bg-[#050505]"
->
-  <!-- CONTENIDO PINNED -->
-  <div id="zoom-content" class="sticky top-0 h-screen w-full flex items-center">
-    <div
-      class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10 mt-[5vh]"
-    >
-      <div class="absolute top-[7vh]">
-        <!-- <p class="text-[5rem] ">SOBRE MI</p> -->
-        <UpText
-          client:load
-          className="text-[6rem] overflow-hidden font-thin font-Zaslia text-[#BD5B2D]"
-        >
-          <p>SOBRE MI</p>
-        </UpText>
+      <!-- TÍTULO -->
+      <div class="col-span-12 md:col-start-1 md:col-span-6 md:row-start-1">
+<h2 class="font-Zaslia text-[#b14327] tracking-wide leading-[0.75]
+           text-[7rem]">
+  <span class="block">SOBRE MI</span>
+
+</h2>
       </div>
 
-      <div class="flex flex-col items-center text-[#EDEBEB]">
-        <p class="font-caslon text-[7.5rem] leading-none">TORRES</p>
-        <p class="font-caslon text-[7.5rem] italic leading-none">LAUREANO</p>
+      <!-- 01 -->
+      <div class="col-span-12 md:col-start-9 md:col-span-6 md:row-start-1 md:mt-2">
+        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
+          {items[0].num}&nbsp;&nbsp;<span class="font-semibold">{items[0].title}</span>
+        </p>
+        <p class="mt-2 max-w-[380px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
+          {items[0].text}
+        </p>
       </div>
-      <div class="w-1/2 mt-10 text-center italic font-montserrat text-sm">
-        <!-- Soy un Desarrollador de Software Junior, recientemente egresado del IES
-        (2025). Me apasiona la tecnología, el aprendizaje constante y la
-        creación de soluciones que conecten diseño y funcionalidad. Me considero
-        una persona curiosa, detallista y comprometida. Disfruto tanto del
-        trabajo en equipo como de los desafíos individuales, y
-        valoro especialmente los proyectos que tienen un impacto real o creativo.
-        Me interesa el desarrollo web full-stack, el diseño interactivo, y las
-        herramientas que permiten experimentar con nuevas formas de construir
-        experiencias digitales. Siempre estoy buscando maneras de crecer,
-        aprender algo nuevo o mejorar lo que ya sé. -->
 
-
-        Soy un Desarrollador de Software Junior, recientemente egresado del IES (2025).
-        Me apasiona la tecnolog&iacute;a, el aprendizaje constante y la creaci&oacute;n
-        de soluciones que conecten dise&ntilde;o y funcionalidad. Me considero una
-        persona curiosa, detallista y comprometida. Disfruto tanto del trabajo en
-        equipo como de los desaf&iacute;os individuales, y valoro especialmente los
-        proyectos que tienen un impacto real o creativo. Me interesa el desarrollo
-        web full-stack, el dise&ntilde;o interactivo, y las herramientas que permiten
-        experimentar con nuevas formas de construir experiencias digitales. Siempre <!-- <--------------- NO ME FUNCIONABA EL TEXTO NORMAL, ASI QUE USE ENTIDADES PARA EL TEXTO -->
-        estoy buscando maneras de crecer, aprender algo nuevo o mejorar lo que ya
-        s&eacute;.
+      <!-- 02 (arriba de la foto) -->
+      <div class="col-span-12 md:col-start-5 md:col-span-4 md:row-start-2">
+        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
+          {items[1].num}&nbsp;&nbsp;<span class="font-semibold">{items[1].title}</span>
+        </p>
+        <p class="mt-2 font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
+          {items[1].text}
+        </p>
+        
       </div>
-    </div>
 
-    <!-- IMAGEN ZOOM -->
-    <img
-      id="zoom-img"
-      src="/Imagenes/mipicture1.jpg"
-      alt="Zoom"
-      class="absolute top-[45vh] left-1/2 w-[207px] h-[303px] object-cover transform -translate-x-1/2 -translate-y-1/2 origin-center z-30 pointer-events-none shadow-[0px_4px_26px_25px_rgba(0,0,0,0.3)]"
-    />
+      <!-- FOTO (centro, debajo de 02) -->
+      <div class="col-span-12 md:col-start-5 md:col-span-4 md:row-start-3 flex items-center justify-center">
+        <div class="w-full max-w-[420px] aspect-[4/5] overflow-hidden bg-[#1a1a1a] shadow-mdrounded-xl">
+          <img
+            src="/Imagenes/otra.jpg"
+            alt="Retrato personal"
+            class="h-full w-full object-cover rounded-xl"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
 
-    <div class="absolute bottom-10 right-5 z-50">
-      <span class="font-montserrat text-[1.4rem]">01</span>
+      <!-- 03 -->
+      <div class="col-span-12 md:col-start-9 md:col-span-4 md:row-start-3">
+        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
+          {items[2].num}&nbsp;&nbsp;<span class="font-semibold">{items[2].title}</span>
+        </p>
+        <p class="mt-2 max-w-[360px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
+          {items[2].text}
+        </p>
+      </div>
+
+      <!-- 04 -->
+      <div class="col-span-12 md:col-start-1 md:col-span-4 md:row-start-3 mt-96">
+        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
+          {items[3].num}&nbsp;&nbsp;<span class="font-semibold">{items[3].title}</span>
+        </p>
+        <p class="mt-2 max-w-[520px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
+          {items[3].text}
+        </p>
+      </div>
+
+      <!-- 05 -->
+      <div class="col-span-12 md:col-start-9 md:col-span-4 md:row-start-3 mt-96">
+        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
+          {items[4].num}&nbsp;&nbsp;<span class="font-semibold">{items[4].title}</span>
+        </p>
+        <p class="mt-2 max-w-[520px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
+          {items[4].text}
+        </p>
+      </div>
+
     </div>
   </div>
 </section>

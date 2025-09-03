@@ -10,7 +10,7 @@
 html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
-  background-color: #050505;
+  background-color: #0c0c0d;
 }
 
 html::-webkit-scrollbar,
@@ -56,6 +56,25 @@ body::-webkit-scrollbar {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/Fonts/Bebas/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/Fonts/InterVariable/IInter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/Fonts/Space_Mono/SpaceMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 
 .font-details {
   font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
