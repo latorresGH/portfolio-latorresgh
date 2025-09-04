@@ -1,115 +1,82 @@
 ---
-const items = [
-  {
-    num: "01",
-    title: "PASIÓN",
-    text:
-      "Me apasiona la tecnología, el aprendizaje constante y la creación de soluciones que conecten diseño y funcionalidad."
-  },
-  {
-    num: "02",
-    title: "FORMACIÓN",
-    text:
-      "Soy Desarrollador de Software Junior, recientemente egresado del IES (2025). Me considero una persona curiosa, detallista y comprometida."
-  },
-  {
-    num: "03",
-    title: "ENFOQUE",
-    text:
-      "Disfruto tanto del trabajo en equipo como de los desafíos individuales. Busco siempre aportar valor en proyectos con impacto real o creativo."
-  },
-  {
-    num: "04",
-    title: "INTERESES",
-    text:
-      "Me interesa el desarrollo web full-stack, el diseño interactivo y las herramientas que permiten experimentar con nuevas formas de construir experiencias digitales."
-  },
-  {
-    num: "05",
-    title: "VISIÓN",
-    text:
-      "Siempre estoy buscando maneras de crecer, aprender algo nuevo o mejorar lo que ya sé. Mi objetivo es seguir formándome y aportar innovación en cada proyecto."
-  }
-];
+// src/pages/index.astro
+import SobreMiFX from "./React/SobreMiFX/SobreMiFX"; // ajustá el alias si usás otro
 ---
 
-<section class="w-full  text-white mb-32">
-  <div class="mx-auto w-full max-w-[1200px] px-6 py-16 md:px-10 md:py-24">
-    <div class="grid grid-cols-12 gap-x-8 gap-y-14">
+<!-- ...TU HERO... -->
 
-      <!-- TÍTULO -->
-      <div class="col-span-12 md:col-start-1 md:col-span-6 md:row-start-1">
-<h2 class="font-Zaslia text-[#b14327] tracking-wide leading-[0.75]
-           text-[7rem]">
-  <span class="block">SOBRE MI</span>
+<!-- Sección SOBRE MÍ (tu HTML actual, sólo asegúrate de estos atributos) -->
+<section id="sobre-mi" class="relative w-screen mb-36">
+  <div class="relative mx-auto w-[92vw] max-w-[1100px] py-20">
+    <!-- Título -->
+    <div class="text-center mb-12">
+      <h2 class="font-Zaslia text-white text-[2.8rem] md:text-[4rem] leading-none">SOBRE MÍ</h2>
+      <p class="mt-2 text-[12px] tracking-[0.28em] text-neutral-300 font-mono">LAUREANO TORRES · DESARROLLADOR JR · AR</p>
+    </div>
 
-</h2>
-      </div>
-
-      <!-- 01 -->
-      <div class="col-span-12 md:col-start-9 md:col-span-6 md:row-start-1 md:mt-2">
-        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
-          {items[0].num}&nbsp;&nbsp;<span class="font-semibold">{items[0].title}</span>
-        </p>
-        <p class="mt-2 max-w-[380px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
-          {items[0].text}
-        </p>
-      </div>
-
-      <!-- 02 (arriba de la foto) -->
-      <div class="col-span-12 md:col-start-5 md:col-span-4 md:row-start-2">
-        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
-          {items[1].num}&nbsp;&nbsp;<span class="font-semibold">{items[1].title}</span>
-        </p>
-        <p class="mt-2 font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
-          {items[1].text}
-        </p>
-        
-      </div>
-
-      <!-- FOTO (centro, debajo de 02) -->
-      <div class="col-span-12 md:col-start-5 md:col-span-4 md:row-start-3 flex items-center justify-center">
-        <div class="w-full max-w-[420px] aspect-[4/5] overflow-hidden bg-[#1a1a1a] shadow-mdrounded-xl">
-          <img
-            src="/Imagenes/otra.jpg"
-            alt="Retrato personal"
-            class="h-full w-full object-cover rounded-xl"
-            loading="lazy"
-            decoding="async"
-          />
+    <!-- Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_minmax(320px,460px)_1fr] gap-10 md:gap-14 items-center">
+      <!-- Izquierda -->
+      <div class="space-y-8 text-center">
+        <div data-reveal="left">
+          <div class="text-[11px] tracking-[0.3em] text-neutral-400 font-mono mb-1">01 PASIÓN</div>
+          <p class="text-sm md:text-[15px] text-neutral-300">Me apasiona la tecnología, el aprendizaje constante y crear soluciones que unan diseño y funcionalidad.</p>
+        </div>
+        <div data-reveal="left">
+          <div class="text-[11px] tracking-[0.3em] text-neutral-400 font-mono mb-1">02 FORMACIÓN</div>
+          <p class="text-sm md:text-[15px] text-neutral-300">Desarrollador de Software Jr (IES · 2025). Curioso, detallista y comprometido con buenas prácticas.</p>
         </div>
       </div>
 
-      <!-- 03 -->
-      <div class="col-span-12 md:col-start-9 md:col-span-4 md:row-start-3">
-        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
-          {items[2].num}&nbsp;&nbsp;<span class="font-semibold">{items[2].title}</span>
-        </p>
-        <p class="mt-2 max-w-[360px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
-          {items[2].text}
-        </p>
+      <!-- Imagen central -->
+      <div id="fotoStack" class="relative aspect-[4/5] w-full mx-auto">
+        <div class="absolute inset-0 translate-x-24 scale-75 opacity-30 overflow-hidden rounded-xl shadow-2xl blur-sm grayscale">
+          <img src="/Imagenes/otra2.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
+        </div>
+        <div class="absolute inset-0 translate-x-10 scale-90 opacity-80 overflow-hidden rounded-xl">
+          <img src="/Imagenes/otra2.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl brightness-75 contrast-125" />
+        </div>
+        <div class="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+          <img src="/Imagenes/otra2.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
+        </div>
       </div>
 
-      <!-- 04 -->
-      <div class="col-span-12 md:col-start-1 md:col-span-4 md:row-start-3 mt-96">
-        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
-          {items[3].num}&nbsp;&nbsp;<span class="font-semibold">{items[3].title}</span>
-        </p>
-        <p class="mt-2 max-w-[520px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
-          {items[3].text}
-        </p>
+      <!-- Derecha -->
+      <div class="space-y-8 text-center">
+        <div data-reveal="right">
+          <div class="text-[11px] tracking-[0.3em] text-neutral-400 font-mono mb-1">03 ENFOQUE</div>
+          <p class="text-sm md:text-[15px] text-neutral-300">Disfruto del trabajo en equipo y de los desafíos individuales. Busco aportar valor con impacto real.</p>
+        </div>
+        <div data-reveal="right">
+          <div class="text-[11px] tracking-[0.3em] text-neutral-400 font-mono mb-1">04 INTERESES</div>
+          <p class="text-sm md:text-[15px] text-neutral-300">Full-stack, UI funcional y herramientas para experimentar nuevas experiencias digitales.</p>
+        </div>
+        <div data-reveal="right">
+          <div class="text-[11px] tracking-[0.3em] text-neutral-400 font-mono mb-1">05 VISIÓN</div>
+          <p class="text-sm md:text-[15px] text-neutral-300">Seguir aprendiendo, mejorar procesos y sumar innovación en cada proyecto.</p>
+        </div>
       </div>
+    </div>
 
-      <!-- 05 -->
-      <div class="col-span-12 md:col-start-9 md:col-span-4 md:row-start-3 mt-96">
-        <p class="text-[#8a5143] font-montserrat text-[11px] md:text-xs tracking-[0.18em]">
-          {items[4].num}&nbsp;&nbsp;<span class="font-semibold">{items[4].title}</span>
-        </p>
-        <p class="mt-2 max-w-[520px] font-FuturaBook text-[13px] md:text-[14px] leading-6 opacity-90">
-          {items[4].text}
-        </p>
+    <!-- Frase + Botones -->
+    <div id="ctaFrase" class="mt-16 text-center space-y-4 opacity-0">
+      <p class="italic text-neutral-400 text-sm max-w-[600px] mx-auto">"El código es como el humor. Cuando tenés que explicarlo, deja de ser bueno."</p>
+      <div class="flex justify-center gap-4 text-[11px] tracking-[0.2em] text-neutral-300 font-mono">
+        <a href="https://github.com/latorresgh" target="_blank" class="px-4 py-1 rounded border border-white/15 bg-white/5 hover:bg-white/10 transition">GITHUB</a>
+        <a href="https://linkedin.com/lauretrrs" target="_blank" class="px-4 py-1 rounded border border-white/15 bg-white/5 hover:bg-white/10 transition">LINKEDIN</a>
       </div>
-
     </div>
   </div>
+
+  <!-- Flecha -->
+  <a href="#estudios" class="absolute bottom-8 right-8 group">
+    <div class="w-12 h-12 rounded-full border border-neutral-500 flex items-center justify-center hover:border-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-neutral-400 group-hover:text-white transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+      </svg>
+    </div>
+  </a>
 </section>
+
+<!-- Montar la isla React (GSAP corre acá) -->
+<SobreMiFX client:load />

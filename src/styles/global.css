@@ -100,5 +100,7 @@ body::-webkit-scrollbar {
     /* Opcional: mejora la legibilidad */
     text-shadow: none;
   }
+
+  #fotoStack.is-scrolling > div { transition: none !important; }
   
 /* Añadir esta parte a tu archivo CSS */
