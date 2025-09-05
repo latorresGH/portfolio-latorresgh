@@ -1,14 +1,63 @@
-import gsap from 'gsap';
+// utils/animations/loadingAnimations.ts
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const initLenis = () => {
-  const lenis = new Lenis();
+  if (typeof window === 'undefined') return;
+
+  const w = window as any;
+  if (w.lenis) return; // evita instancias duplicadas
+
+  const lenis = new Lenis({
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.1,
+    duration: 1.0,
+  });
+
+  // expone global por si querés inspeccionar desde consola
+  w.lenis = lenis;
+
+  // Lenis notifica a ScrollTrigger cuando hay scroll
+  lenis.on('scroll', () => ScrollTrigger.update());
+
+  // loop de Lenis (uno solo en toda la app)
   const raf = (time: number) => {
     lenis.raf(time);
     requestAnimationFrame(raf);
   };
   requestAnimationFrame(raf);
+
+  // ——— PUENTE Lenis ↔ ScrollTrigger ———
+  const scroller = document.documentElement;
+
+  ScrollTrigger.scrollerProxy(scroller, {
+    scrollTop(value?: number) {
+      if (arguments.length) {
+        lenis.scrollTo(value!, { immediate: true });
+      }
+      return window.scrollY || window.pageYOffset || 0;
+    },
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+    pinType: 'transform',
+  });
+
+  // que todos los triggers usen ese scroller por defecto
+  ScrollTrigger.defaults({ scroller });
+
+  // hacelo accesible para debug en consola si querés
+  ;(window as any).ScrollTrigger = ScrollTrigger;
+
+  // primer refresh
+  ScrollTrigger.refresh();
 };
+
+
 
 export const animarPantallaDeCarga = () => {
   let porcentaje = { valor: 0 };

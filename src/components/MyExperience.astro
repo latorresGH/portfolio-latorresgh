@@ -1,132 +1,16 @@
 ---
-import ScrambleText from "./React/ScrambleText/ScrambleText.tsx";
+import ProjectsGridParallax from './React/ProjectsGridParallax/ProjectsGridParallax';
+import type { Project } from './React/ProjectsGridParallax/ProjectsGridParallax.tsx';
+
+const projects: Project[] = [
+  { title: 'Proyecto Principal', year: '2025', image: '/Imagenes/Experience/StickeandoLayout.png', featured: true, speed: 0.25 },
+  { title: 'Proyecto 2', year: '2024', image: '/Imagenes/Experience/Experiencia7.png', speed: 0.30 },
+  { title: 'Proyecto 3', year: '2024', image: '/Imagenes/Experience/Experiencia2.webp', speed: 0.30 },
+  { title: 'Proyecto 4', year: '2023', image: '/Imagenes/Experience/Experiencia4.jpg', speed: 0.35 },
+  { title: "", addPlaceholder: true, year: '', href: '/nuevo-proyecto' }
+
+];
 ---
 
-<section class="text-white">
-  <div
-    class="grid grid-cols-3 grid-rows-2 gap-[65px] mx-auto py-20"
-    style="max-width: calc(3 * 400px + 2 * 50px);"
-  >
-<ScrambleText
-  text={`MI\nEXPE\nRIEN\nCIA`}
-  className="h-[550px] w-[400px] flex items-center justify-center text-[8rem] leading-none text-center break-words font-Zaslia"
-  trigger="hover"               
-  stepTime={10}                 
-  iterations={5}               
-  scrambleFraction={0.05}      
-  idleJitter={true}             
-  idleEveryMs={3800}           
-  idleBatch={5}               
-  chars="#$%{}[]()/\\|<>_-=+*?@~^&0123456789"
-  client:load                  
-/>
-    <div
-      class="h-[550px] w-[400px] rounded-[10px] bg-[#141417] font-FuturaBook p-8 flex flex-col justify-between items-start hover:scale-[1.01] transition-transform duration-300"
-    >
-      <div>
-        <p class="text-[3rem] font-montserrat">01</p>
-      </div>
+<ProjectsGridParallax projects={projects} client:only="react" />
 
-      <div>
-        <div>
-          <p class="text-[1.8rem] leading-custom max-w-[300px]">
-            STICKEANDO. <br /><br />
-            ES UNA TIENDA E-COMMERCE QUE VENDE STICKERS ORIGINALES Y PERSONALIZADOS,
-            ME CONTRATARON COMO FREELANCER EN SU ENTONCES
-          </p>
-        </div>
-
-        <div>
-          <p class="text-[1rem]">2024</p>
-        </div>
-      </div>
-    </div>
-    <div
-        class="h-[550px] w-[400px] rounded-[10px] bg-[url(/Imagenes/Experience/StickeandoLayout.png)] bg-cover bg-center font-FuturaBook p-8 flex flex-col justify-between items-start transition-all duration-300 hover:brightness-75 cursor-pointer hover:scale-[1.01]"
-    >
-      <div>
-        <p class="text-[3rem] font-montserrat">02</p>
-      </div>
-    </div>
-
-    <div
-      class="relative h-[550px] w-[400px] rounded-[10px] bg-[#141417] font-FuturaBook p-8 hover:scale-[1.01] transition-transform duration-300"
-    >
-      <div class="relative z-20">
-        <p class="text-[3rem] font-montserrat">03</p>
-      </div>
-
-      <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[250px] bg-[url(/Imagenes/Experience/PP2Layout.png)] bg-center bg-contain bg-no-repeat z-10 ransition-all duration-300 hover:brightness-75 cursor-pointer hover:scale-[1.01]"
-      >
-      </div>
-    </div>
-
-    <div
-      class="h-[550px] w-[400px] rounded-[10px] bg-[#141417] font-FuturaBook p-8 flex flex-col justify-between items-start hover:scale-[1.01] transition-transform duration-300"
-    >
-      <div>
-        <p class="text-[3rem] font-montserrat">04</p>
-      </div>
-
-      <div>
-        <div>
-          <p class="text-[1.8rem] leading-custom max-w-[300px]">
-            PROFESIONALIZANTE 1. <br /><br />
-            PLATAFORMA QUE PERMITE A LOS PELÍCULAS Y SERIES, MIENTRAS QUE DESDE LA
-            PARTE ADMINISTRADORA SE PUEDEN GESTIONAR LOS CONTENIDOS.
-          </p>
-        </div>
-
-        <div>
-          <p class="text-[1rem]">2024</p>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="h-[550px] w-[400px] rounded-[10px] bg-[#32323A] font-montserrat flex flex-col items-center justify-center hover:scale-[1.01] transition-transform duration-300"
-    >
-      <div>
-        <svg
-          class="w-[80px] h-[80px] transition-transform duration-300 ease-in-out hover:rotate-180 cursor-pointer"
-          version="1.1"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 50 50"
-          enable-background="new 0 0 50 50"
-          xml:space="preserve"
-          fill="#000000"
-          ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
-            id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
-            <line
-              fill="none"
-              stroke="#ededed"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              x1="25"
-              y1="10.5"
-              x2="25"
-              y2="39.5"></line>
-            <circle fill="none" stroke="#ededed" cx="25" cy="25" r="23.667"
-            ></circle>
-            <line
-              fill="none"
-              stroke="#ededed"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              x1="39.5"
-              y1="25"
-              x2="10.5"
-              y2="25"></line>
-          </g></svg
-        >
-      </div>
-
-      <div>VER TODO</div>
-    </div>
-  </div>
-</section>

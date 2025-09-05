@@ -104,3 +104,13 @@ body::-webkit-scrollbar {
   #fotoStack.is-scrolling > div { transition: none !important; }
   
 /* Añadir esta parte a tu archivo CSS */
+
+.gsap-marker-start,
+.gsap-marker-end,
+.gsap-marker-scroller-start,
+.gsap-marker-scroller-end {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+  mix-blend-mode: normal !important;
+}
