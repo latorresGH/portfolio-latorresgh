@@ -11,6 +11,7 @@ import ContactMe from "../components/ContactMe.astro";
 import Footer from "../components/Footer.astro";
 import MyEducation from "../components/MyEducation.astro";
 import AboutTwo from "../components/AboutTwo.astro";
+import Works from "../components/Works.astro";
 ---
 
 <Loader client:load />
@@ -18,7 +19,6 @@ import AboutTwo from "../components/AboutTwo.astro";
   <Home />
   <section id="sobre-mi" class="scroll-mt-20">
     <AboutMe />
-    <!-- <AboutTwo /> -->
   </section>
   <section id="estudios" class="scroll-mt-20">
     <MyEducation />
@@ -28,7 +28,11 @@ import AboutTwo from "../components/AboutTwo.astro";
     </section>
     <section id="skills" class="scroll-mt-20">
       <MySkills/>
+    </section> 
+    <section id="trabajos" class="scroll-mt-20 mt-72">
+      <Works />
     </section>
+
     <section id="contactame" class="scroll-mt-20">
       <ContactMe />
     </section>

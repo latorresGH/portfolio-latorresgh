@@ -18,37 +18,29 @@ type Card = {
 const CARDS: Card[] = [
   {
     id: '01',
-    title: 'Design',
-    desc: 'DESIGN SERVICES ARE FOCUSED ...',
+    title: 'Diseño',
+    desc: 'Te entrego un diseño atractivo y profesional, y juntos vemos si es lo que buscás para tu proyecto.',
     image: '/Imagenes/Experience/StickeandoLayout.png',
     color: 'bg-[#181919]',  
     text: 'text-white/90' 
   },
   {
     id: '02',
-    title: 'Development',
-    desc: 'THROUGH WEB DEVELOPMENT ...',
+    title: 'Desarrollo',
+    desc: 'Transformo tu idea en una web funcional y moderna, cuidando cada detalle técnico y visual.',
     image: '/Imagenes/Experience/PP2Layout.png',
-    color: 'bg-[#f7fafd]',   // azul tailwind slate-800
-    text: 'text-black/80' 
-    
+
+        color: 'bg-[#f7fafd]',   // azul tailwind slate-800
+    text: 'text-black/90' 
   },
   {
     id: '03',
-    title: 'Backend',
-    desc: 'SPRING BOOT, JWT ...',
-    image: '/Imagenes/Experience/Backend.png',
-    color: 'bg-[#b4cfdc]',   // gris azulado
+    title: 'Tu website',
+    desc: 'Realizo la web que desees adaptándome a tus gustos y necesidades, lista para crecer con vos.',
+    image: '/Imagenes/Experience/asasd.png',
+    color: 'bg-[#f97316]',  // naranja cálido
     text: 'text-white/90'
   },
-//   {
-//     id: '04',
-//     title: 'Mobile',
-//     desc: 'REACT NATIVE E-COMMERCE ...',
-//     image: '/Imagenes/Experience/Mobile.png',
-//     color: 'bg-[#4C1D95]',   // violeta tailwind purple-900
-//     text: 'text-white/90'
-//   },
 ];
 
 
@@ -147,7 +139,7 @@ export default function ExperienceHorizontal() {
 <div className="shrink-0 h-[460px] w-[750px] rounded-[28px] bg-transparent flex flex-col justify-between items-start p-10">
   {/* Texto arriba izquierda */}
   <p className="text-left font-[500] leading-tight text-[clamp(1.2rem,2vw,1.8rem)] text-white/90">
-    TE INTERESA MI <br /> EXPERIENCIA?
+    TE INTERESAN MIS <br /> SERVICIOS?
   </p>
 
   {/* Flecha abajo izquierda */}

@@ -11,6 +11,7 @@ html, body {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
   background-color: #0c0c0d;
+  /* background-color: #050706; */
 }
 
 html::-webkit-scrollbar,

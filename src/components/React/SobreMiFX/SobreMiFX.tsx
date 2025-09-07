@@ -61,7 +61,7 @@ export default function SobreMiFX() {
       gsap.set([back, mid, front], { transformOrigin: "50% 60%", force3D: true, willChange: "transform" });
 
       // Estado base (marcado para que se note)
-      gsap.set(back,  { x: 24, y: 24, scale: 0.78, rotate: -6, opacity: 0.18, filter: "blur(4px) grayscale(100%)" });
+      gsap.set(back,  { x: 24, y: 24, scale: 0.78, rotate: -6, opacity: 0.18, filter: "blur(4px) " });
       gsap.set(mid,   { x: 10, y: 12, scale: 0.92, rotate: -3, opacity: 0.68, filter: "brightness(0.75) contrast(1.35)" });
       gsap.set(front, { x:  0, y:  6, scale: 1.06, rotate:  1, opacity: 1 });
 
@@ -95,7 +95,7 @@ scrollTrigger: {
           // Un SOLO driver: x/y/rotate/scale/opacity, sin otros tweens tocando y/x
           tl.to(front, { scale: 0.985, y: 0,   rotate: 0 }, 0)
             .to(mid,   { x: 30 * amp, y: -12 * amp, rotate: -8 * amp, opacity: 0.9,  filter: "brightness(0.72) contrast(1.4)" }, 0)
-            .to(back,  { x: 80 * amp, y: -24 * amp, rotate: -14 * amp, opacity: 0.42, filter: "blur(3px) grayscale(100%)" }, 0);
+            .to(back,  { x: 80 * amp, y: -24 * amp, rotate: -14 * amp, opacity: 0.42, filter: "blur(3px) " }, 0);
 
           // cleanup para este breakpoint
           return () => tl.kill();
