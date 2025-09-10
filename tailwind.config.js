@@ -28,6 +28,9 @@ export default {
       borderWidth: {
         0.5: "0.5px",
       },
+      screens: {
+        xs: '475px',
+      },
     },
   },
   plugins: [],
