@@ -161,89 +161,102 @@ export default function ProjectsGridParallax({ projects, className = '' }: Props
     };
   }, []);
 
-  return (
-    <section ref={rootRef} className={`w-full text-white ${className}`}>
-      <style>{`
-        /* 0-10%: fade-in suave; 10-33%: sólido; 33-100%: fade-out lento */
-        @keyframes pixelLifecycle {
-          0%   { opacity: 0; }
-          10%  { opacity: 1; }
-          33%  { opacity: 1; }
-          100% { opacity: 0; }
-        }
-        .pixel-spark {
-          position: absolute;
-          background: #0c0c0d;      /* negro sólido */
-          will-change: opacity;
-        }
-      `}</style>
+ return (
+  <section ref={rootRef} className={`w-full text-white ${className}`}>
+    <style>{`
+      /* 0-10%: fade-in suave; 10-33%: sólido; 33-100%: fade-out lento */
+      @keyframes pixelLifecycle {
+        0%   { opacity: 0; }
+        10%  { opacity: 1; }
+        33%  { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      .pixel-spark {
+        position: absolute;
+        background: #0c0c0d;      /* negro sólido */
+        will-change: opacity;
+      }
+    `}</style>
 
-      <div className="px-10 py-20">
-        <div className="grid grid-cols-2 gap-9">
-          {projects.map((p, i) => {
-            const cardClasses = `relative overflow-hidden bg-[#141417] ${
-              p.featured ? 'h-[90vh] rounded-[60px]' : 'h-[55vh] rounded-[40px]'
-            }`;
+    {/* CHANGED: padding un poco más compacto en tel */}
+    <div className="px-4 sm:px-6 md:px-10 py-12 sm:py-16 md:py-20">
+      {/* CHANGED: 2 columnas SIEMPRE (también en móvil) y gaps más chicos en tel */}
+      <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-9"> {/* CHANGED */}
+        {projects.map((p, i) => {
+          /* CHANGED: cards más bajas/compactas en tel */
+          const cardClasses = `relative overflow-hidden bg-[#141417] ${
+            p.featured
+              ? 'h-[46vh] sm:h-[64vh] md:h-[90vh] rounded-[22px] sm:rounded-[36px] md:rounded-[60px]' /* CHANGED */
+              : 'h-[12vh] sm:h-[42vh] md:h-[55vh] rounded-[18px] sm:rounded-[26px] md:rounded-[40px]' /* CHANGED */
+          } min-h-[180px] sm:min-h-[260px]`; /* NEW: piso menor en tel */
 
-            if (p.addPlaceholder) {
-              const Wrapper: React.ElementType = p.href ? 'a' : 'div';
-              return (
-                <div key={i} className={p.featured ? 'col-span-2' : ''}>
-                  <Wrapper
-                    href={p.href}
-                    className="group block focus:outline-none focus:ring-2 focus:ring-white/40 rounded-[40px]"
-                    aria-label="Agregar proyecto"
-                    role="button"
-                  >
-                    <article data-card className={`${cardClasses} grid place-items-center`}>
-                      <div className="absolute inset-0 rounded-[inherit] ring-1 ring-white/10" />
-                      <div className="relative h-28 w-28">
-                        <span className="absolute left-1/2 top-1/2 h-1 w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-transform duration-500 ease-out group-hover:rotate-180" />
-                        <span className="absolute left-1/2 top-1/2 w-1 h-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-transform duration-500 ease-out group-hover:rotate-180" />
-                      </div>
-                      <div className="absolute bottom-6 left-0 right-0 text-center text-white/80">
-                        Your project
-                      </div>
-                      <div className="absolute inset-0 rounded-[inherit] transition group-hover:bg-white/5" />
-                    </article>
-                  </Wrapper>
-
-                  <div className="mt-3 mb-4 flex items-center justify-between">
-                    <span className="text-sm md:text-base text-white/70">{p.year ?? ''}</span>
-                  </div>
-                </div>
-              );
-            }
-
+          if (p.addPlaceholder) {
+            const Wrapper: React.ElementType = p.href ? 'a' : 'div';
             return (
-              <div key={i} className={p.featured ? 'col-span-2' : ''}>
-                <article data-card className={cardClasses}>
-                  <div
-                    data-imgwrap
-                    data-speed={String(p.speed ?? 0.25)}
-                    className="absolute inset-0 will-change-transform transform-gpu pointer-events-none"
-                  >
-                    {p.image && (
-                      <img
-                        src={p.image}
-                        alt={p.title}
-                        className="block h-full w-full object-cover scale-125"
-                        loading="lazy"
-                      />
-                    )}
-                  </div>
-                  <div className="absolute inset-0 bg-black/10" />
-                </article>
+              <div key={i} className={p.featured ? 'col-span-2' : '' /* CHANGED: span en todas las vistas */}>
+                <Wrapper
+                  href={p.href}
+                  className="group block focus:outline-none focus:ring-2 focus:ring-white/40 rounded-[22px] sm:rounded-[36px] md:rounded-[40px]" /* CHANGED */
+                  aria-label="Agregar proyecto"
+                  role="button"
+                >
+                  <article data-card className={`${cardClasses} grid place-items-center`}>
+                    <div className="absolute inset-0 rounded-[inherit] ring-1 ring-white/10" />
+                    {/* CHANGED: icono más chico en tel */}
+                    <div className="relative h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28"> {/* CHANGED */}
+                      <span className="absolute left-1/2 top-1/2 h-1 w-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-transform duration-500 ease-out group-hover:rotate-180" />
+                      <span className="absolute left-1/2 top-1/2 w-1 h-full -translate-x-1/2 -translate-y-1/2 rounded-full bg-white transition-transform duration-500 ease-out group-hover:rotate-180" />
+                    </div>
+                    <div className="absolute bottom-4 sm:bottom-5 left-0 right-0 text-center text-white/80"> {/* CHANGED */}
+                      Your project
+                    </div>
+                    <div className="absolute inset-0 rounded-[inherit] transition group-hover:bg-white/5" />
+                  </article>
+                </Wrapper>
 
-                <div className="mt-3 mb-4 flex items-center justify-between">
-                  <h3 className="text-[1.2rem] md:text-[1.4rem] font-medium">{p.title}</h3>
-                  <span className="text-sm md:text-base text-white/70">{p.year}</span>
+                {/* CHANGED: tipografías más chicas en tel */}
+                <div className="mt-2 mb-3 sm:mt-3 sm:mb-4 flex items-center justify-between"> {/* CHANGED */}
+                  <span className="text-[11px] sm:text-sm md:text-base text-white/70">{p.year ?? ''}</span> {/* CHANGED */}
                 </div>
               </div>
             );
-          })}
-        </div>
+          }
+
+          return (
+            <div key={i} className={p.featured ? 'col-span-2' : '' /* CHANGED: span en todas las vistas */}>
+              <article data-card className={cardClasses}>
+                <div
+                  data-imgwrap
+                  data-speed={String(p.speed ?? 0.25)}
+                  className="absolute inset-0 will-change-transform transform-gpu pointer-events-none"
+                >
+                  {p.image && (
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      /* CHANGED: menos zoom en móvil para “respirar” en 2 columnas */
+                      className="block h-full w-full object-cover scale-105 sm:scale-115 md:scale-125" /* CHANGED */
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div className="absolute inset-0 bg-black/10" />
+              </article>
+
+              {/* CHANGED: título/año más compactos en tel */}
+              <div className="mt-2 mb-3 sm:mt-3 sm:mb-4 flex items-center justify-between"> {/* CHANGED */}
+                <h3 className="text-[0.98rem] sm:text-[1.15rem] md:text-[1.4rem] font-medium"> {/* CHANGED */}
+                  {p.title}
+                </h3>
+                <span className="text-[11px] sm:text-sm md:text-base text-white/70"> {/* CHANGED */}
+                  {p.year}
+                </span>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }

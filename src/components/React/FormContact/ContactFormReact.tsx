@@ -51,22 +51,84 @@ export default function ContactFormReact() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-4 text-5xl font-montserrat" noValidate>
-      {/* Anti-spam honeypot */}
-      <input type="text" name="hpot" className="hidden" autoComplete="off" />
+<form
+  onSubmit={handleSubmit}
+  noValidate
+  className="
+    mx-auto w-full max-w-xl sm:max-w-2xl           /* centrado + ancho máx */
+    px-4 sm:px-6
+    flex flex-col gap-4
+    font-montserrat
+    text-base sm:text-lg                           /* en lugar de text-5xl */
+  "
+>
+  <input type="text" name="hpot" className="hidden" autoComplete="off" />
 
-      <input name="nombre" type="text" placeholder="PRIMER NOMBRE" className="border-0 border-b border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" required />
-      <input name="apellido" type="text" placeholder="APELLIDO" className="border-0 border-b border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" required />
-      <input name="correo" type="email" placeholder="CORREO" className="border-0 border-b border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 py-2" required />
-      <textarea name="mensaje" placeholder="MENSAJE QUE DESEAS ENVIAR" className="border-[0.5px] border-[#5a2b16] bg-transparent text-white placeholder-stone-800 focus:outline-none focus:ring-0 h-64 py-2 px-2 resize-none" required />
+  <input
+    name="nombre"
+    type="text"
+    placeholder="PRIMER NOMBRE"
+    className="
+      w-full border-0 border-b border-[#5a2b16]
+      bg-transparent text-white placeholder-stone-600
+      focus:outline-none focus:ring-0 py-2
+    "
+    required
+  />
 
-      <button type="submit" className="mt-4 w-fit self-end px-6 py-3 border border-[#5a2b16] text-white text-3xl hover:bg-[#5a2b16] transition-all duration-300">
-        {status === "sending" ? "ENVIANDO..." : "ENVIAR"}
-      </button>
+  <input
+    name="apellido"
+    type="text"
+    placeholder="APELLIDO"
+    className="
+      w-full border-0 border-b border-[#5a2b16]
+      bg-transparent text-white placeholder-stone-600
+      focus:outline-none focus:ring-0 py-2
+    "
+    required
+  />
 
-      {error && <p className="text-red-400 text-xl mt-2">{error}</p>}
-      {status === "success" && <p className="text-green-400 text-xl mt-2">Enviado correctamente</p>}
-      {status === "error" && <p className="text-red-400 text-xl mt-2">Error al enviar. Probá de nuevo.</p>}
-    </form>
+  <input
+    name="correo"
+    type="email"
+    placeholder="CORREO"
+    className="
+      w-full border-0 border-b border-[#5a2b16]
+      bg-transparent text-white placeholder-stone-600
+      focus:outline-none focus:ring-0 py-2
+    "
+    required
+  />
+
+  <textarea
+    name="mensaje"
+    placeholder="MENSAJE QUE DESEAS ENVIAR"
+    className="
+      w-full border-[0.5px] border-[#5a2b16]
+      bg-transparent text-white placeholder-stone-600
+      focus:outline-none focus:ring-0
+      min-h-[12rem] sm:min-h-[14rem] py-2 px-2 resize-y
+    "
+    required
+  />
+
+  <button
+    type="submit"
+    className="
+      mt-4 w-full sm:w-auto             /* full en móvil, a medida en sm+ */
+      sm:self-end                       /* deja de “pegarse” a la derecha en móvil */
+      px-6 py-3 border border-[#5a2b16]
+      text-white text-base sm:text-lg
+      hover:bg-[#5a2b16] transition-all duration-300 rounded-md
+    "
+  >
+    {status === "sending" ? "ENVIANDO..." : "ENVIAR"}
+  </button>
+
+  {error && <p className="text-red-400 text-sm sm:text-base mt-2">{error}</p>}
+  {status === "success" && <p className="text-green-400 text-sm sm:text-base mt-2">Enviado correctamente</p>}
+  {status === "error" && <p className="text-red-400 text-sm sm:text-base mt-2">Error al enviar. Probá de nuevo.</p>}
+</form>
+
   );
 }

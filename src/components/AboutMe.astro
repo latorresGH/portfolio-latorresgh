@@ -29,17 +29,30 @@ import SobreMiFX from "./React/SobreMiFX/SobreMiFX"; // ajustá el alias si usá
       </div>
 
       <!-- Imagen central -->
-      <div id="fotoStack" class="relative aspect-[4/5] w-full mx-auto">
-        <div class="absolute inset-0 translate-x-24 scale-75 opacity-30 overflow-hidden rounded-xl shadow-2xl blur-sm grayscale">
-          <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
-        </div>
-        <div class="absolute inset-0 translate-x-10 scale-90 opacity-80 overflow-hidden rounded-xl">
-          <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl brightness-75 contrast-125" />
-        </div>
-        <div class="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
-          <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
-        </div>
-      </div>
+<div id="fotoStack" 
+     class="relative aspect-[4/5] w-[70%] max-w-[220px] mx-auto 
+            sm:w-[60%] sm:max-w-[260px] 
+            md:w-full md:max-w-[460px]">
+  <!-- Imagen 1 (fondo borroso) -->
+  <div class="absolute inset-0 translate-x-12 scale-75 opacity-30 overflow-hidden rounded-xl shadow-2xl blur-sm grayscale 
+              sm:translate-x-16 
+              md:translate-x-24">
+    <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
+  </div>
+
+  <!-- Imagen 2 (medio) -->
+  <div class="absolute inset-0 translate-x-5 scale-90 opacity-80 overflow-hidden rounded-xl 
+              sm:translate-x-8 
+              md:translate-x-10">
+    <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl brightness-75 contrast-125" />
+  </div>
+
+  <!-- Imagen 3 (frontal) -->
+  <div class="relative h-full w-full overflow-hidden rounded-xl shadow-lg">
+    <img src="/Imagenes/otra3.jpg" alt="Retrato" class="h-full w-full object-cover rounded-xl" />
+  </div>
+</div>
+
 
       <!-- Derecha -->
       <div class="space-y-8 text-center">
