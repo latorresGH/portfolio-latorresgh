@@ -20,7 +20,7 @@ const CARDS: Card[] = [
     id: '01',
     title: 'Diseño',
     desc: 'Te entrego un diseño atractivo y profesional, y juntos vemos si es lo que buscás para tu proyecto.',
-    image: '/Imagenes/Experience/StickeandoLayout.png',
+    image: '/Imagenes/Experience/StickeandoLayout.webp',
     color: 'bg-[#181919]',  
     text: 'text-white/90' 
   },
@@ -28,7 +28,7 @@ const CARDS: Card[] = [
     id: '02',
     title: 'Desarrollo',
     desc: 'Transformo tu idea en una web funcional y moderna, cuidando cada detalle técnico y visual.',
-    image: '/Imagenes/Experience/PP2Layout.png',
+    image: '/Imagenes/Experience/PP2Layout.webp',
 
         color: 'bg-[#f7fafd]',   // azul tailwind slate-800
     text: 'text-black/90' 
@@ -37,7 +37,7 @@ const CARDS: Card[] = [
     id: '03',
     title: 'Tu website',
     desc: 'Realizo la web que desees adaptándome a tus gustos y necesidades, lista para crecer con vos.',
-    image: '/Imagenes/Experience/asasd.png',
+    image: '/Imagenes/Experience/asasd.webp',
     color: 'bg-[#f97316]',  // naranja cálido
     text: 'text-white/90'
   },

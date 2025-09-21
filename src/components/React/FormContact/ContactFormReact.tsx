@@ -55,11 +55,11 @@ export default function ContactFormReact() {
   onSubmit={handleSubmit}
   noValidate
   className="
-    mx-auto w-full max-w-xl sm:max-w-2xl           /* centrado + ancho máx */
+    mx-auto w-full max-w-xl sm:max-w-2xl          
     px-4 sm:px-6
     flex flex-col gap-4
     font-montserrat
-    text-base sm:text-lg                           /* en lugar de text-5xl */
+    text-base sm:text-lg                           
   "
 >
   <input type="text" name="hpot" className="hidden" autoComplete="off" />
