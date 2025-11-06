@@ -5,8 +5,8 @@ import { animarLineaEducacion } from "../../../utils/animations/myEducation";
 
 const timelineItems = [
   { fecha: "2022 - 2025", titulo: "Desarrollo de Software", descripcion: "Instituto IES. Carrera con enfoque en lógica, bases de datos y desarrollo web y móvil.", side: "left" },
-  { fecha: "2025", titulo: "Curso React Native", descripcion: "Curso en Folder. Desarrollo de e-commerce mobile con React Native.", side: "right" },
   { fecha: "2024", titulo: "Curso Visual Basic & Java", descripcion: "En I2T creamos una lotería usando VB y Spring Boot. Trabajo práctico intensivo.", side: "left" },
+  { fecha: "2025", titulo: "Curso React Native", descripcion: "Curso en Folder. Desarrollo de e-commerce mobile con React Native.", side: "right" },
 ];
 
 export default function EducationTimeline() {
